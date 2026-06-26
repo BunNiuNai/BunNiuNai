@@ -57,44 +57,6 @@
 
 <br>
 
-## 🚀 精选项目
-
-### ETS2/TruckersMP 联机聊天实时翻译工具
-
-<a href="https://github.com/BunNiuNai/Euro-Truck-Simulator-2-TruckersMP-In-Game-Translator">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=BunNiuNai&repo=Euro-Truck-Simulator-2-TruckersMP-In-Game-Translator&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&icon_color=00d4ff&text_color=ffffff" />
-</a>
-
-**功能**: 自动翻译 TruckersMP 联机聊天中的多国语言为简体中文
-
-**技术栈**: Python
-
----
-
-### ETS2-TMP 全自动广告软件
-
-<a href="https://github.com/BunNiuNai/ETS2-TMP-Fully-automated-advertising-software">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=BunNiuNai&repo=ETS2-TMP-Fully-automated-advertising-software&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&icon_color=00d4ff&text_color=ffffff" />
-</a>
-
-**功能**: 游戏内自动循环发送广告消息的桌面工具
-
-**技术栈**: Java
-
----
-
-### ETS2 离线存档管理器
-
-<a href="https://github.com/BunNiuNai/ETS2OfflineProfileManager">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=BunNiuNai&repo=ETS2OfflineProfileManager&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&icon_color=00d4ff&text_color=ffffff" />
-</a>
-
-**功能**: ETS2 离线活动存档快速部署工具 / DLC 屏蔽
-
-**技术栈**: Python
-
-<br>
-
 ## 📫 联系我
 
 <div align="center">
