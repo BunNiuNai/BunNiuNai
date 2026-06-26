@@ -70,9 +70,3 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=120&section=footer" />
 </div>
-
----
-
-<div align="center">
-  <sub>Made with ❤️ for ETS2 Community</sub>
-</div>
