@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=32&pause=1000&color=000000&center=true&vCenter=true&width=600&height=60&lines=%F0%9F%91%8B+Hi%2C+I'm+BunNiuNai;%E2%86%92+Hello+World" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=32&pause=1000&color=000000&center=true&vCenter=true&width=600&height=60&lines=%F0%9F%91%8B+Hi%2C+I'm+BinNiuNai;%E2%86%92+Hello+World" alt="Typing SVG" />
 </div>
 
 <div align="center">
@@ -16,7 +16,7 @@
 
 - 🎮 热爱欧卡模拟驾驶游戏
 - 💻 使用 Python / Java 开发游戏辅助工具
-- 🌍 为 TruckersMP 联机社区提供帮助
+- 🌍 为 TruckersMP 联机提供帮助
 - ⚡ 持续优化和更新项目
 
 <br>
