@@ -61,8 +61,20 @@
 
 <div align="center">
   <a href="https://github.com/BunNiuNai" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
+  <a href="mailto:bunniunai@example.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://discord.com/users/BunNiuNai" target="_blank">
+    <img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+  </a>
+</div>
+
+<br>
+
+<div align="center">
+  <p>欢迎通过以上方式联系我！</p>
 </div>
 
 <br>
