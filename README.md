@@ -63,9 +63,6 @@
   <a href="https://github.com/BunNiuNai" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-  <a href="mailto:3433684064@qq.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
   <a href="https://kook.vip/WJZ5Sj" target="_blank">
     <img src="https://img.shields.io/badge/Kook-%237EB8E8.svg?style=for-the-badge&logo=discord&logoColor=white" alt="Kook" />
   </a>
