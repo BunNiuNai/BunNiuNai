@@ -45,20 +45,20 @@
 ## 📊 GitHub 统计
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=BunNiuNai&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&icon_color=00d4ff&text_color=ffffff&count_private=true" alt="GitHub Stats" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=BunNiuNai&theme=tokyonight&hide_border=true&background=0f0f23&stroke=667eea&ring=764ba2&fire=00d4ff&currStreakLabel=667eea" alt="GitHub Streak" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=BunNiuNai&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&icon_color=00d4ff&text_color=ffffff&count_private=true&locale=cn" alt="GitHub Stats" />
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=BunNiuNai&theme=tokyonight&hide_border=true&background=0f0f23&stroke=667eea&ring=764ba2&fire=00d4ff&currStreakLabel=667eea&locale=cn" alt="GitHub Streak" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BunNiuNai&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&text_color=ffffff&langs_count=6&card_width=600" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BunNiuNai&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&text_color=ffffff&langs_count=6&card_width=600&locale=cn" alt="Top Languages" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=BunNiuNai&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&icon_color=00d4ff&text_color=ffffff&count_private=true&include_all_commits=true&custom_title=Total%20Contributions" alt="Total Contributions" />
+  <img src="https://github-readme-stats.vercel.app/api?username=BunNiuNai&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&icon_color=00d4ff&text_color=ffffff&count_private=true&include_all_commits=true&custom_title=Total%20Contributions&locale=cn" alt="Total Contributions" />
 </div>
 
 <br>
