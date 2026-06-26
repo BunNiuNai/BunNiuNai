@@ -57,12 +57,6 @@
 
 <br>
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=BunNiuNai&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=667eea&icon_color=00d4ff&text_color=ffffff&count_private=true&include_all_commits=true&custom_title=Total%20Contributions&locale=cn" alt="Total Contributions" />
-</div>
-
-<br>
-
 ## 🚀 精选项目
 
 ### ETS2/TruckersMP 联机聊天实时翻译工具
