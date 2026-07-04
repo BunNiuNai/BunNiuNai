@@ -298,32 +298,28 @@ def generate_typing_svg():
 
 
 def generate_badges_svg(followers, stars, repos_count):
-    """生成徽章行 SVG"""
+    """生成徽章行 SVG：三栏均分，避免中文宽度估算错位"""
     items = [
-        ("👁", "访问量", None, None),  # GitHub API 无此数据，用占位
-        ("👥", "关注者", followers, TITLE),
-        ("★", "星标数", stars, FIRE),
+        ("👥", "关注者", followers),
+        ("★", "星标数", stars),
+        ("📦", "仓库数", repos_count),
     ]
 
     width = 400
-    height = 30
+    height = 36
 
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">\n'
-    svg += f'  <rect width="{width}" height="{height}" rx="6" fill="{BG}" stroke="{STROKE}" stroke-width="1"/>\n'
+    svg += f'  <rect width="{width}" height="{height}" rx="8" fill="{BG}" stroke="{STROKE}" stroke-width="1"/>\n'
 
-    x = 20
-    for icon, label, value, color in items:
-        svg += f'  <text x="{x}" y="20" fill="{ICON}" font-family="Segoe UI, sans-serif" font-size="12">{icon}</text>\n'
-        x += 22
-        if value is not None:
-            svg += f'  <text x="{x}" y="20" fill="{TEXT}" font-family="Segoe UI, sans-serif" font-size="12">{label}: </text>\n'
-            text_w = len(label) * 7 + 12
-            x += text_w
-            svg += f'  <text x="{x}" y="20" fill="{color}" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">{value}</text>\n'
-            x += len(str(value)) * 8 + 20
-        else:
-            svg += f'  <text x="{x}" y="20" fill="{SUBTLE}" font-family="Segoe UI, sans-serif" font-size="12">{label}</text>\n'
-            x += len(label) * 7 + 20
+    col_w = width // 3
+    for i, (icon, label, value) in enumerate(items):
+        cx = col_w * i + col_w // 2
+        svg += f'  <text x="{cx-40}" y="23" fill="{ICON}" font-family="Segoe UI, sans-serif" font-size="13">{icon}</text>\n'
+        svg += f'  <text x="{cx-20}" y="23" fill="{TEXT}" font-family="Segoe UI, sans-serif" font-size="12">{label}</text>\n'
+        svg += f'  <text x="{cx+22}" y="23" fill="{TITLE}" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">{value}</text>\n'
+        if i < 2:
+            sep_x = col_w * (i + 1)
+            svg += f'  <line x1="{sep_x}" y1="8" x2="{sep_x}" y2="28" stroke="{STROKE}" stroke-width="0.5" opacity="0.5"/>\n'
 
     svg += "</svg>"
     return svg
