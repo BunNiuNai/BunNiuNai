@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="80" viewBox="0 0 500 80">
-  <text x="250" y="32" fill="#000000" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" text-anchor="middle">👋 Hi, I'm BunNiuNai</text>
-  <text x="250" y="62" fill="#000000" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" text-anchor="middle">→ Hello World</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="90" viewBox="0 0 500 90">
+  <rect width="500" height="90" rx="10" fill="#0f0f23"/>
+  <text x="250" y="36" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" text-anchor="middle">👋 Hi, I'm BunNiuNai</text>
+  <text x="250" y="66" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" text-anchor="middle">→ Hello World</text>
 </svg>
