@@ -171,7 +171,7 @@ def generate_stats_svg(user, repos, commits, prs, issues, total_stars, total_for
     ]
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
-  <rect width="{width}" height="{height}" rx="8" fill="{BG}"/>
+  <rect width="{width}" height="{height}" rx="8" fill="{BG}" stroke="{STROKE}" stroke-width="1"/>
   <text x="20" y="32" fill="{TITLE}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="18" font-weight="700">📊 GitHub 统计</text>
   <line x1="20" y1="42" x2="{width-20}" y2="42" stroke="{STROKE}" stroke-width="0.5" opacity="0.3"/>
 '''
@@ -210,7 +210,7 @@ def generate_top_langs_svg(repos):
     height = 200
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
-  <rect width="{width}" height="{height}" rx="8" fill="{BG}"/>
+  <rect width="{width}" height="{height}" rx="8" fill="{BG}" stroke="{STROKE}" stroke-width="1"/>
   <text x="20" y="32" fill="{TITLE}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="18" font-weight="700">🔧 最常用语言</text>
   <line x1="20" y1="42" x2="{width-20}" y2="42" stroke="{STROKE}" stroke-width="0.5" opacity="0.3"/>
 '''
@@ -258,7 +258,7 @@ def generate_streak_svg(current, longest, total_contrib):
     height = 120
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
-  <rect width="{width}" height="{height}" rx="8" fill="{BG}"/>
+  <rect width="{width}" height="{height}" rx="8" fill="{BG}" stroke="{STROKE}" stroke-width="1"/>
 
   <!-- 标题 -->
   <text x="{width//2}" y="28" fill="{TITLE}" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" text-anchor="middle">🔥 GitHub 连续提交</text>
@@ -309,7 +309,7 @@ def generate_badges_svg(followers, stars, repos_count):
     height = 30
 
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">\n'
-    svg += f'  <rect width="{width}" height="{height}" rx="6" fill="{BG}"/>\n'
+    svg += f'  <rect width="{width}" height="{height}" rx="6" fill="{BG}" stroke="{STROKE}" stroke-width="1"/>\n'
 
     x = 20
     for icon, label, value, color in items:
@@ -342,7 +342,7 @@ def generate_tech_stack_svg():
     height = 44
 
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">\n'
-    svg += f'  <rect width="{width}" height="{height}" rx="6" fill="{BG}"/>\n'
+    svg += f'  <rect width="{width}" height="{height}" rx="6" fill="{BG}" stroke="{STROKE}" stroke-width="1"/>\n'
 
     x = 15
     for name, color in techs:
