@@ -1,14 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="36" viewBox="0 0 400 36">
-  <rect width="400" height="36" rx="8" fill="#0f0f23"/>
-  <text x="26" y="23" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="13">👥</text>
-  <text x="46" y="23" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12">关注者</text>
-  <text x="88" y="23" fill="#00d4ff" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">0</text>
-  <line x1="133" y1="8" x2="133" y2="28" stroke="#667eea" stroke-width="0.5" opacity="0.3"/>
-  <text x="159" y="23" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="13">★</text>
-  <text x="179" y="23" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12">星标数</text>
-  <text x="221" y="23" fill="#00d4ff" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">0</text>
-  <line x1="266" y1="8" x2="266" y2="28" stroke="#667eea" stroke-width="0.5" opacity="0.3"/>
-  <text x="292" y="23" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="13">📦</text>
-  <text x="312" y="23" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12">仓库数</text>
-  <text x="354" y="23" fill="#00d4ff" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">4</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="30" viewBox="0 0 400 30">
+  <rect width="400" height="30" rx="6" fill="#ffffff"/>
+  <text x="20" y="20" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="12">👁</text>
+  <text x="42" y="20" fill="#6b7280" font-family="Segoe UI, sans-serif" font-size="12">访问量</text>
+  <text x="83" y="20" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="12">👥</text>
+  <text x="105" y="20" fill="#1f2937" font-family="Segoe UI, sans-serif" font-size="12">关注者: </text>
+  <text x="138" y="20" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">0</text>
+  <text x="166" y="20" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="12">★</text>
+  <text x="188" y="20" fill="#1f2937" font-family="Segoe UI, sans-serif" font-size="12">星标数: </text>
+  <text x="221" y="20" fill="#f59e0b" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">0</text>
 </svg>

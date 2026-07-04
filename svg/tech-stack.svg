@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420" height="44" viewBox="0 0 420 44">
-  <rect width="420" height="44" rx="8" fill="#0f0f23"/>
-  <rect x="15" y="8" width="84" height="28" rx="6" fill="#667eea" opacity="0.9"/>
+  <rect width="420" height="44" rx="6" fill="#ffffff"/>
+  <rect x="15" y="8" width="84" height="28" rx="4" fill="#3776AB" opacity="0.85"/>
   <text x="57" y="26" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Python</text>
-  <rect x="107" y="8" width="66" height="28" rx="6" fill="#764ba2" opacity="0.9"/>
+  <rect x="107" y="8" width="66" height="28" rx="4" fill="#ED8B00" opacity="0.85"/>
   <text x="140" y="26" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Java</text>
-  <rect x="181" y="8" width="57" height="28" rx="6" fill="#00d4ff" opacity="0.9"/>
+  <rect x="181" y="8" width="57" height="28" rx="4" fill="#F05032" opacity="0.85"/>
   <text x="209" y="26" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Git</text>
-  <rect x="246" y="8" width="93" height="28" rx="6" fill="#5b21b6" opacity="0.9"/>
+  <rect x="246" y="8" width="93" height="28" rx="4" fill="#007ACC" opacity="0.85"/>
   <text x="292" y="26" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" text-anchor="middle">VS Code</text>
 </svg>
