@@ -1,0 +1,49 @@
+name: Generate Stats SVGs
+
+# 100% 第一方方案：
+# - 使用 GitHub 官方 GITHUB_TOKEN 认证
+# - 数据来源：api.github.com（GitHub 官方 API）
+# - 仅用 Python 标准库生成 SVG，无任何第三方依赖
+# - 生成的 SVG 提交到仓库，由 raw.githubusercontent.com（GitHub 官方 CDN）提供
+
+on:
+  schedule:
+    # 每天北京时间凌晨 0 点自动运行
+    - cron: "0 16 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/generate_svg.py"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_svg.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add svg/
+          if git diff --staged --quiet; then
+            echo "无变化，跳过提交"
+          else
+            git commit -m "chore: 自动更新 GitHub 统计 SVG [skip ci]"
+            git push
+          fi
