@@ -21,15 +21,15 @@ HEADERS = {
     "User-Agent": USERNAME,
 }
 
-# 主题色（tokyonight 风格）
-BG = "#0f0f23"
+# 主题色（浅色主题，适配白色 GitHub 背景）
+BG = "#ffffff"
 TITLE = "#667eea"
-ICON = "#00d4ff"
-TEXT = "#ffffff"
-SUBTLE = "#a0a0c0"
-STROKE = "#667eea"
-FIRE = "#00d4ff"
-GREEN = "#4ade80"
+ICON = "#667eea"
+TEXT = "#1f2937"
+SUBTLE = "#6b7280"
+STROKE = "#e5e7eb"
+FIRE = "#f59e0b"
+GREEN = "#10b981"
 
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "svg")
 
@@ -309,7 +309,7 @@ def generate_badges_svg(followers, stars, repos_count):
     height = 30
 
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">\n'
-    svg += f'  <rect width="{width}" height="{height}" rx="6" fill="{BG}" opacity="0.8"/>\n'
+    svg += f'  <rect width="{width}" height="{height}" rx="6" fill="{BG}"/>\n'
 
     x = 20
     for icon, label, value, color in items:
