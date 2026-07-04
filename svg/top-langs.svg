@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="200" viewBox="0 0 420 200">
+  <rect width="420" height="200" rx="8" fill="#0f0f23"/>
+  <text x="20" y="32" fill="#667eea" font-family="Segoe UI, Ubuntu, sans-serif" font-size="18" font-weight="700">🔧 最常用语言</text>
+  <line x1="20" y1="42" x2="400" y2="42" stroke="#667eea" stroke-width="0.5" opacity="0.3"/>
+  <text x="24" y="62" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12">Python</text>
+  <rect x="110" y="52" width="286" height="12" rx="2" fill="#3776AB" opacity="0.8"/>
+  <text x="396" y="62" fill="#a0a0c0" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="end">75.0%</text>
+  <text x="24" y="86" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12">Java</text>
+  <rect x="110" y="76" width="95" height="12" rx="2" fill="#ED8B00" opacity="0.8"/>
+  <text x="396" y="86" fill="#a0a0c0" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="end">25.0%</text>
+</svg>

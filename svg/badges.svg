@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="30" viewBox="0 0 400 30">
+  <rect width="400" height="30" rx="6" fill="#0f0f23" opacity="0.8"/>
+  <text x="20" y="20" fill="#00d4ff" font-family="Segoe UI, sans-serif" font-size="12">👁</text>
+  <text x="42" y="20" fill="#a0a0c0" font-family="Segoe UI, sans-serif" font-size="12">访问量</text>
+  <text x="83" y="20" fill="#00d4ff" font-family="Segoe UI, sans-serif" font-size="12">👥</text>
+  <text x="105" y="20" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12">关注者: </text>
+  <text x="138" y="20" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">0</text>
+  <text x="166" y="20" fill="#00d4ff" font-family="Segoe UI, sans-serif" font-size="12">★</text>
+  <text x="188" y="20" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12">星标数: </text>
+  <text x="221" y="20" fill="#00d4ff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">0</text>
+</svg>
