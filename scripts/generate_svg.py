@@ -174,7 +174,6 @@ def generate_stats_svg(user, repos, commits, prs, issues, total_stars, total_for
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <rect width="{width}" height="{height}" rx="8" fill="{BG}"/>
-  <!-- 标题 -->
   <text x="20" y="32" fill="{TITLE}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="18" font-weight="700">📊 GitHub 统计</text>
   <line x1="20" y1="42" x2="{width-20}" y2="42" stroke="{STROKE}" stroke-width="0.5" opacity="0.3"/>
 '''
@@ -183,9 +182,10 @@ def generate_stats_svg(user, repos, commits, prs, issues, total_stars, total_for
     row_h = 24
     for i, (icon, label, value) in enumerate(rows):
         y = y_start + i * row_h
-        svg += f'''  <text x="24" y="{y}" fill="{ICON}" font-family="Segoe UI, sans-serif" font-size="14">{icon}</text>
+        # 统一：图标 #667eea、标签 #ffffff、数字单一强调色 #00d4ff
+        svg += f'''  <text x="24" y="{y}" fill="{TITLE}" font-family="Segoe UI, sans-serif" font-size="14">{icon}</text>
   <text x="48" y="{y}" fill="{TEXT}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">{escape_xml(label)}</text>
-  <text x="{width-24}" y="{y}" fill="{TEXT}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" text-anchor="end" font-weight="600">{value}</text>
+  <text x="{width-24}" y="{y}" fill="{ICON}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" text-anchor="end" font-weight="700">{value}</text>
 '''
 
     svg += "</svg>"
@@ -209,23 +209,6 @@ def generate_top_langs_svg(repos):
 
     top_langs = lang_counter.most_common(6)
 
-    # 语言颜色映射
-    lang_colors = {
-        "Python": "#3776AB",
-        "Java": "#ED8B00",
-        "JavaScript": "#F7DF1E",
-        "TypeScript": "#3178C6",
-        "HTML": "#E34F26",
-        "CSS": "#1572B6",
-        "Shell": "#89E051",
-        "C": "#555555",
-        "C++": "#00599C",
-        "Go": "#00ADD8",
-        "Rust": "#DEA584",
-        "Jupyter Notebook": "#DA5B0B",
-        "Batchfile": "#C1F12E",
-    }
-
     width = 420
     height = 200
 
@@ -240,14 +223,17 @@ def generate_top_langs_svg(repos):
     bar_max_w = width - bar_x - 24
     row_h = 24
 
+    # 统一主题渐变色（紫蓝 → 紫 → 青），不再使用各语言品牌色
+    bar_colors = ["#667eea", "#764ba2", "#00d4ff", "#5b21b6", "#06b6d4", "#818cf8"]
+
     for i, (lang, count) in enumerate(top_langs):
         pct = round(count / total * 100, 1)
         bar_w = max(int(bar_max_w * count / max(c for _, c in top_langs)), 4)
-        color = lang_colors.get(lang, "#764ba2")
+        color = bar_colors[i % len(bar_colors)]
         y = y_start + i * row_h
 
         svg += f'''  <text x="24" y="{y}" fill="{TEXT}" font-family="Segoe UI, sans-serif" font-size="12">{escape_xml(lang)}</text>
-  <rect x="{bar_x}" y="{y-10}" width="{bar_w}" height="12" rx="2" fill="{color}" opacity="0.8"/>
+  <rect x="{bar_x}" y="{y-10}" width="{bar_w}" height="12" rx="2" fill="{color}" opacity="0.85"/>
   <text x="{width-24}" y="{y}" fill="{SUBTLE}" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="end">{pct}%</text>
 '''
 
@@ -266,16 +252,14 @@ def generate_streak_svg(current, longest, total_contrib):
   <!-- 标题 -->
   <text x="{width//2}" y="28" fill="{TITLE}" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" text-anchor="middle">🔥 GitHub 连续提交</text>
 
-  <!-- 当前连续 -->
-  <text x="70" y="68" fill="{TEXT}" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" text-anchor="middle">{current}</text>
+  <!-- 三组数字统一强调色 #00d4ff，不再白/青/绿混用 -->
+  <text x="70" y="68" fill="{ICON}" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" text-anchor="middle">{current}</text>
   <text x="70" y="88" fill="{SUBTLE}" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="middle">当前连续（天）</text>
 
-  <!-- 最长连续 -->
-  <text x="210" y="68" fill="{FIRE}" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" text-anchor="middle">{longest}</text>
+  <text x="210" y="68" fill="{ICON}" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" text-anchor="middle">{longest}</text>
   <text x="210" y="88" fill="{SUBTLE}" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="middle">最长连续（天）</text>
 
-  <!-- 总贡献 -->
-  <text x="350" y="68" fill="{GREEN}" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" text-anchor="middle">{total_contrib}</text>
+  <text x="350" y="68" fill="{ICON}" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" text-anchor="middle">{total_contrib}</text>
   <text x="350" y="88" fill="{SUBTLE}" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="middle">总贡献数</text>
 
   <!-- 分割线 -->
@@ -286,71 +270,70 @@ def generate_streak_svg(current, longest, total_contrib):
 
 
 def generate_typing_svg():
-    """生成标题 SVG"""
+    """生成标题 SVG：深色卡片背景，白字，适配 GitHub 亮暗双模式"""
     lines = ["👋 Hi, I'm BunNiuNai", "→ Hello World"]
     width = 500
-    height = 80
+    height = 90
 
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">\n'
+    svg += f'  <rect width="{width}" height="{height}" rx="10" fill="{BG}"/>\n'
     for i, line in enumerate(lines):
-        y = 32 + i * 30
-        color = "#000000"
+        y = 36 + i * 30
+        # 主标题用主题色，副标题用白色
+        color = TITLE if i == 0 else TEXT
         svg += f'  <text x="{width//2}" y="{y}" fill="{color}" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" text-anchor="middle">{escape_xml(line)}</text>\n'
     svg += "</svg>"
     return svg
 
 
 def generate_badges_svg(followers, stars, repos_count):
-    """生成徽章行 SVG"""
+    """生成徽章行 SVG：图标统一 #667eea，数字统一强调色 #00d4ff"""
     items = [
-        ("👁", "访问量", None, None),  # GitHub API 无此数据，用占位
-        ("👥", "关注者", followers, TITLE),
-        ("★", "星标数", stars, FIRE),
+        ("👥", "关注者", followers),
+        ("★", "星标数", stars),
+        ("📦", "仓库数", repos_count),
     ]
 
     width = 400
-    height = 30
+    height = 36
 
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">\n'
-    svg += f'  <rect width="{width}" height="{height}" rx="6" fill="{BG}" opacity="0.8"/>\n'
+    svg += f'  <rect width="{width}" height="{height}" rx="8" fill="{BG}"/>\n'
 
-    x = 20
-    for icon, label, value, color in items:
-        svg += f'  <text x="{x}" y="20" fill="{ICON}" font-family="Segoe UI, sans-serif" font-size="12">{icon}</text>\n'
-        x += 22
-        if value is not None:
-            svg += f'  <text x="{x}" y="20" fill="{TEXT}" font-family="Segoe UI, sans-serif" font-size="12">{label}: </text>\n'
-            text_w = len(label) * 7 + 12
-            x += text_w
-            svg += f'  <text x="{x}" y="20" fill="{color}" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">{value}</text>\n'
-            x += len(str(value)) * 8 + 20
-        else:
-            svg += f'  <text x="{x}" y="20" fill="{SUBTLE}" font-family="Segoe UI, sans-serif" font-size="12">{label}</text>\n'
-            x += len(label) * 7 + 20
+    # 均分三栏布局
+    col_w = width // 3
+    for i, (icon, label, value) in enumerate(items):
+        cx = col_w * i + col_w // 2
+        svg += f'  <text x="{cx-40}" y="23" fill="{TITLE}" font-family="Segoe UI, sans-serif" font-size="13">{icon}</text>\n'
+        svg += f'  <text x="{cx-20}" y="23" fill="{TEXT}" font-family="Segoe UI, sans-serif" font-size="12">{label}</text>\n'
+        svg += f'  <text x="{cx+22}" y="23" fill="{ICON}" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">{value}</text>\n'
+        if i < 2:
+            sep_x = col_w * (i + 1)
+            svg += f'  <line x1="{sep_x}" y1="8" x2="{sep_x}" y2="28" stroke="{STROKE}" stroke-width="0.5" opacity="0.3"/>\n'
 
     svg += "</svg>"
     return svg
 
 
 def generate_tech_stack_svg():
-    """生成技术栈 SVG"""
+    """生成技术栈 SVG：统一使用主题色系，替代各语言品牌色"""
     techs = [
-        ("Python", "#3776AB"),
-        ("Java", "#ED8B00"),
-        ("Git", "#F05032"),
-        ("VS Code", "#007ACC"),
+        ("Python", "#667eea"),
+        ("Java", "#764ba2"),
+        ("Git", "#00d4ff"),
+        ("VS Code", "#5b21b6"),
     ]
 
     width = 420
     height = 44
 
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">\n'
-    svg += f'  <rect width="{width}" height="{height}" rx="6" fill="{BG}"/>\n'
+    svg += f'  <rect width="{width}" height="{height}" rx="8" fill="{BG}"/>\n'
 
     x = 15
     for name, color in techs:
         w = len(name) * 9 + 30
-        svg += f'  <rect x="{x}" y="8" width="{w}" height="28" rx="4" fill="{color}" opacity="0.85"/>\n'
+        svg += f'  <rect x="{x}" y="8" width="{w}" height="28" rx="6" fill="{color}" opacity="0.9"/>\n'
         svg += f'  <text x="{x + w // 2}" y="26" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" text-anchor="middle">{escape_xml(name)}</text>\n'
         x += w + 8
 
