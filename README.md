@@ -1,8 +1,8 @@
-<!-- 纯第一方方案：所有 SVG 由 GitHub Actions 自动生成，存储在仓库中，由 GitHub CDN 提供 -->
-<!-- 不依赖任何第三方服务（Vercel/Heroku/demolab/shields.io 等），永不限流 -->
+<!-- 纯第一方方案：统计 SVG 由 GitHub Actions 自动生成 -->
+<!-- typing.svg 使用 readme-typing-svg 外部服务实现打字机动画 -->
 
 <div align="center">
-  <img src="./svg/typing.svg" alt="Title" />
+  <img src="https://readme-typing-svg.demolab.com?font=Segoe+UI&weight=700&size=28&pause=1200&color=000000&center=true&vCenter=true&width=500&height=60&lines=%F0%9F%91%8B+Hi%2C+I'm+BunNiuNai;%E2%86%92+Hello+World" alt="Typing SVG" />
 </div>
 
 <br>
