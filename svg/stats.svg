@@ -4,7 +4,7 @@
   <line x1="20" y1="42" x2="400" y2="42" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
   <text x="24" y="66" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="14">★</text>
   <text x="48" y="66" fill="#1f2937" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">星标总数</text>
-  <text x="396" y="66" fill="#1f2937" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" text-anchor="end" font-weight="600">0</text>
+  <text x="396" y="66" fill="#1f2937" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" text-anchor="end" font-weight="600">1</text>
   <text x="24" y="90" fill="#667eea" font-family="Segoe UI, sans-serif" font-size="14">⬇</text>
   <text x="48" y="90" fill="#1f2937" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">总提交数</text>
   <text x="396" y="90" fill="#1f2937" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" text-anchor="end" font-weight="600">166</text>
